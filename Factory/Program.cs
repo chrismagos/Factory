@@ -4,16 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Factory guitarFactory = new GuitarFactory();
-            Instrument guitar = guitarFactory.createInstrument();
-            Factory bassFactory = new BassFactory();
-            Instrument bass = bassFactory.createInstrument();
-            Factory drumsFactory = new DrumsFactory();
-            Instrument drums = drumsFactory.createInstrument();
+            Factory factory1;
+            Factory factory2;
+            Factory factory3;
 
-            guitar.PlaySound();
-            bass.PlaySound();
-            drums.PlaySound();
+            factory1 = new GuitarFactory();
+            factory2 = new BassFactory();
+            factory3 = new DrumsFactory();
+
+            factory1.createInstrument().PlaySound();
+            factory2.createInstrument().PlaySound();
+            factory3.createInstrument().PlaySound();
         }
     }
 }
